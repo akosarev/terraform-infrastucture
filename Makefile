@@ -16,7 +16,6 @@ init: #### Initialization of terraform
 
 validate: #### Validate
 	@make init
-	@make fmt
 	terraform validate
 
 plan: #### Create a plan for your infra
@@ -31,5 +30,3 @@ destroy: #### Destroy everything
 	@make validate
 	terraform destroy --auto-approve
 
-fmt: #### Check format code
-	terraform fmt --check
