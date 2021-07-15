@@ -1,4 +1,4 @@
-name: "Main: Deploy infrastructure"
+name: "Destroy: Destroy infrastructure"
 
 # Controls when the workflow will run
 on:
