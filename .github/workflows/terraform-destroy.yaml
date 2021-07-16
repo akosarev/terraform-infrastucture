@@ -31,7 +31,7 @@ jobs:
           aws-region: eu-west-1
 
       - name: Terraform Destroy
-        id: plan
+        id: destroy
         run: make destroy
 
 
