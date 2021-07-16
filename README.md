@@ -22,30 +22,6 @@ During this run next components will be created:
 * 2 ESK nodes
 * role attachments and many other things.
 
-
-Best practices to choose AMI ID is using data block, so i added it to choose ami_id for ec2 instance:
-
-```
-data "aws_ami" "amazon-linux-2" {
-    most_recent = true
-    owners = [ "amazon" ]
-
-    filter {
-        name   = "owner-alias"
-        values = ["amazon"]
-    }
-
-
-    filter {
-        name   = "name"
-        values = ["amzn2-ami-hvm*"]
-    }
-}
-```
-
-I rewrote some parameters in override.tf file. Every parameter i provide there will be asked by Terraform during plan or apply.
-
-
 Notes:
 
 If you run locally and after want to check EKS you can copy config:
